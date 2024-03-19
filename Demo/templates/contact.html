@@ -1,0 +1,32 @@
+  <!-- contact section start -->
+{% extends "base.html" %}
+{% block body %} 
+{% load static %}
+ <div class="contact_section layout_padding">
+   <div class="container">
+      <div class="contact_main">
+         <h1 class="request_text">A Call Back</h1> 
+         <form action="/contact/" method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+               <input type="text" class="email-bt" placeholder="Name" name="name">
+            </div>
+            <div class="form-group">
+               <input type="text" class="email-bt" placeholder="Email" name="email">
+            </div>
+            <div class="form-group">
+               <input type="text" class="email-bt" placeholder="Phone Numbar" name="number">
+            </div>
+            <div class="form-group">
+               <textarea class="massage-bt" placeholder="Massage" rows="5" id="comment" name="massage"></textarea>
+            </div>
+            <div ><button type="submit" class="send_btn">
+               Send
+             </button></div>
+         </form>
+         
+      </div>
+   </div>
+</div>
+{% endblock body %}
+<!-- contact section end -->

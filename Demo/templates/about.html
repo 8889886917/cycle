@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block body %} 
+{% load static %}
+<!-- about section start -->
+<div class="about_section layout_padding">
+   {% for i in item %}
+   <div class="container">
+     
+      <h1 class="about_taital">{{i.Tittle}}</h1>
+      <p class="about_text">{{i.Description}}</p>
+      <div class="about_main">
+         <img src={{i.Image.url}} class="image_5">
+      </div>
+      {% endfor %}
+      <div class="read_bt_1"><a href="#">Read More</a></div>
+   </div>
+   
+</div>
+<!-- about section end -->
+{% endblock body %}
